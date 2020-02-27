@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
 
   
   spec.description  = <<-DESC
-		    "this is CBNCommonModule content description."
+		    this is CBNCommonModule content description.
                    DESC
 
   spec.homepage     = "https://github.com/KevinXieliang/cbnCommonPublic"
@@ -22,13 +22,12 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/KevinXieliang/cbnCommonPublic.git", :tag => "#{spec.version}" }
 
-  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.source_files  = "CBNCommonModule/CBNCommonModule/Category", "CBNCommonModule/CBNCommonModule/Category/**/*.{h,m}" //源文件(可以包含.h和.m)
-  # spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "CBNCommonModule/CBNCommonModule/Category/**/*.{h,m}"
   # spec.exclude_files = "CBNCommonModule/CBNCommonModule/AppDelegate.{h,m}", "CBNCommonModule/CBNCommonModule/main.m"
   # spec.public_header_files = "Classes/**/*.h"
 
 
-  spec.frameworks    = 'Foundation'
-  spec.platform     = :iOS, "8.0" //最低支持版本
+  spec.platform       = :ios, "8.0"
+  spec.requires_arc   = true
+
 end
